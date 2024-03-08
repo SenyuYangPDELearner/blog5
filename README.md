@@ -44,7 +44,7 @@ $$
 f(t)\leq A\exp{\int\_0^tg(s)\,ds}
 $$
 
-当然可以直接用微分不等式的方法证明，这是经典的数分习题. 但这里我们采用更冗长————但也更符合Grownwall本性，更普适的**bootstrap method**，即自反馈机制对系统本身的控制. 证明基于一个拓扑事实.
+当然可以直接用微分不等式的方法证明，这是经典的数分习题. 但这里我们采用更冗长——但也更符合Grownwall本性，更普适的**bootstrap method**，即自反馈机制对系统本身的控制. 证明基于一个拓扑事实.
 
 > **引理.** 设拓扑空间$X$连通，则$X$中既开又闭的子集要么是空集，要么是$X$本身.
 
@@ -60,9 +60,13 @@ $f(t),\int_0^tg\,ds$连续，所以$O$是闭集.<br/><br/>
 开性是证明的关键. 设$t\in O$，我们把$(B)$代入定理的条件：
 
 $$
-f(t)\leq A+A\int_{0}^t\exp{(1+\epsilon)\int_0^sg(y)\,dy}\cdot (1+\epsilon)g(s)\,ds=A(1+\exp{(1+\epsilon)\int_0^t g(s)\,ds}-1)=A\exp{(1+\epsilon)\int_0^t g(s)\,ds}<(1+\epsilon)A\exp{((1+\epsilon)\int_0^tg(s)\,ds}.
+f(t)\leq A+A\int_{0}^t\exp{(1+\epsilon)\int_0^sg(y)\,dy}\cdot (1+\epsilon)g(s)\,ds=A(1+\exp{(1+\epsilon)\int_0^t g(s)\,ds}-1)
 $$
 
-由$f$连续性可知存在$\delta>0$, $[0,t+\delta)\subset O$. 所以$O$是开集.
+$$
+=A\exp{(1+\epsilon)\int_0^t g(s)\,ds}<(1+\epsilon)A\exp{((1+\epsilon)\int_0^tg(s)\,ds}.
+$$
+
+由$f$连续性可知存在$\delta>0$, $[0,t+\delta)\subset O$. 所以$O$是开集.<br/><br/>
 
 综上可知$O=[0,T]$，令$\epsilon\to 0$即得到Grownwall不等式. &ensp;$\Box$
