@@ -39,10 +39,10 @@ $$
 f(t)\leq A+\int_{0}^tf(s)g(s)ds,
 $$
 >
-> 那么对对任意$t\in[0,T]$，
+> 那么对任意$t\in[0,T]$，
 >
 $$
-f(t)\leq A\exp{\int\_0^tg(s)ds}
+f(t)\leq A\exp{\int_0^t g(s)ds}
 $$
 
 当然可以直接用微分不等式的方法证明，这是经典的数分习题. 但这里我们采用更冗长——但也更符合Grownwall本性，更普适的**bootstrap method**，即自反馈机制对系统本身的控制. 证明基于一个拓扑事实.
