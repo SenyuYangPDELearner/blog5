@@ -28,7 +28,7 @@ MathJax.Hub.Config({
 </head>
 <div class="bjimg"></div>
 
-# 因为要写作业写论文所以没想出什么好topic但是可以水几句bootstrap method不然博客没有一篇分析方向文章太不像PDE废柴了
+# 因为要写作业写论文所以没想到什么好topic但是可以水几句bootstrap method不然博客没有一篇分析方向文章太不像PDE废柴了
 
 <font size="2">2024.3.8</font> <br/>
 以下是广为人知当然也无处不在的**Grownwall不等式**(没有她可能会饿死很多PDE人罢233
@@ -45,11 +45,11 @@ $$
 f(t)\leq Ae^{\int_0^t g(s)ds}
 $$
 
-当然可以直接用微分不等式的方法证明，这是经典的数分习题. 但这里我们采用更冗长——但也更符合Grownwall本性，更普适的**bootstrap method**，即自反馈机制对系统本身的控制. 证明基于一个拓扑事实.
+当然可以直接用微分不等式的方法证明，这是经典的数分习题. 但这里我们采用更冗长——但也更符合Grownwall本性，更普适的**bootstrap method**，即(线性)反馈机制对系统本身的控制. 证明基于一个拓扑事实.
 
 > **引理.** 设拓扑空间$X$连通，则$X$中既开又闭的子集要么是空集，要么是$X$本身.
 
-在定理中$X=[0,T]$. 子集的构造值得思考：对任意$\epsilon>0$，考虑以下条件(induction hypothesis)
+在定理中$X=[0,T]$. 子集的构造不那么显然：对任意$\epsilon>0$，考虑以下条件(induction hypothesis)
 
 $$
 f(t)\leq (1+\epsilon)Ae^{(1+\epsilon)\int_0^t g(s)ds}.\tag{B}
@@ -65,17 +65,13 @@ f(t)\leq A+A\int_{0}^te^{(1+\epsilon)\int_0^s g(y)dy}\cdot (1+\epsilon)g(s)ds
 $$
 
 $$
-=Ae^{(1+\epsilon)\int_0^t g(s)ds}
-$$
-
-$$
-<(1+\epsilon)Ae^{(1+\epsilon)\int_0^t g(s)ds}.
+=Ae^{(1+\epsilon)\int_0^t g(s)ds}<(1+\epsilon)Ae^{(1+\epsilon)\int_0^t g(s)ds}.
 $$
 
 由$f$连续性可知存在$\delta>0$, $[0,t+\delta)\subset O$. 所以$O$是开集.<br/><br/>
 综上可知$O=[0,T]$，令$\epsilon\to 0$即得到Grownwall不等式. &ensp;$\Box$<br/>
 
-(读者可以思考如果直接把定理结论作为条件$(B)$证明会出现什么问题?
+(如果直接把定理结论作为条件$(B)$证明会出现什么问题?
 
 <br/>
 [少女祈祷中...](https://senyuyangpdelearner.github.io/blog)
